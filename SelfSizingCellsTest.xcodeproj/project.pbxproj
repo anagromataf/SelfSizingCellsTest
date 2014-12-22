@@ -20,6 +20,7 @@
 		F64298521A487E6B00872E25 /* ICStreamLayoutInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F642984C1A487E6A00872E25 /* ICStreamLayoutInfo.m */; };
 		F64298531A487E6B00872E25 /* ICStreamLayoutSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F642984E1A487E6A00872E25 /* ICStreamLayoutSectionInfo.m */; };
 		F64298541A487E6B00872E25 /* ICStreamLayoutItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F64298501A487E6A00872E25 /* ICStreamLayoutItemInfo.m */; };
+		F64298581A4888C200872E25 /* ICStreamLayoutInvalidationContext.m in Sources */ = {isa = PBXBuildFile; fileRef = F64298571A4888C200872E25 /* ICStreamLayoutInvalidationContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,8 @@
 		F642984E1A487E6A00872E25 /* ICStreamLayoutSectionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStreamLayoutSectionInfo.m; sourceTree = "<group>"; };
 		F642984F1A487E6A00872E25 /* ICStreamLayoutItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStreamLayoutItemInfo.h; sourceTree = "<group>"; };
 		F64298501A487E6A00872E25 /* ICStreamLayoutItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStreamLayoutItemInfo.m; sourceTree = "<group>"; };
+		F64298561A4888C200872E25 /* ICStreamLayoutInvalidationContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStreamLayoutInvalidationContext.h; sourceTree = "<group>"; };
+		F64298571A4888C200872E25 /* ICStreamLayoutInvalidationContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStreamLayoutInvalidationContext.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +109,7 @@
 				F6278AD71A45FC16002D553E /* CollectionViewCell.m */,
 				F64298491A487E6A00872E25 /* ICStreamLayout.h */,
 				F642984A1A487E6A00872E25 /* ICStreamLayout.m */,
-				F642984B1A487E6A00872E25 /* ICStreamLayoutInfo.h */,
-				F642984C1A487E6A00872E25 /* ICStreamLayoutInfo.m */,
-				F642984D1A487E6A00872E25 /* ICStreamLayoutSectionInfo.h */,
-				F642984E1A487E6A00872E25 /* ICStreamLayoutSectionInfo.m */,
-				F642984F1A487E6A00872E25 /* ICStreamLayoutItemInfo.h */,
-				F64298501A487E6A00872E25 /* ICStreamLayoutItemInfo.m */,
+				F64298551A48875D00872E25 /* Internal */,
 				F6278AD81A45FC16002D553E /* CollectionViewCell.xib */,
 				F6278AB71A45FB12002D553E /* Main.storyboard */,
 				F6278ABA1A45FB12002D553E /* Images.xcassets */,
@@ -145,6 +143,21 @@
 				F6278AC81A45FB12002D553E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F64298551A48875D00872E25 /* Internal */ = {
+			isa = PBXGroup;
+			children = (
+				F64298561A4888C200872E25 /* ICStreamLayoutInvalidationContext.h */,
+				F64298571A4888C200872E25 /* ICStreamLayoutInvalidationContext.m */,
+				F642984B1A487E6A00872E25 /* ICStreamLayoutInfo.h */,
+				F642984C1A487E6A00872E25 /* ICStreamLayoutInfo.m */,
+				F642984D1A487E6A00872E25 /* ICStreamLayoutSectionInfo.h */,
+				F642984E1A487E6A00872E25 /* ICStreamLayoutSectionInfo.m */,
+				F642984F1A487E6A00872E25 /* ICStreamLayoutItemInfo.h */,
+				F64298501A487E6A00872E25 /* ICStreamLayoutItemInfo.m */,
+			);
+			name = Internal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +263,7 @@
 			files = (
 				F64298511A487E6A00872E25 /* ICStreamLayout.m in Sources */,
 				F6278AB31A45FB12002D553E /* AppDelegate.m in Sources */,
+				F64298581A4888C200872E25 /* ICStreamLayoutInvalidationContext.m in Sources */,
 				F64298521A487E6B00872E25 /* ICStreamLayoutInfo.m in Sources */,
 				F6278AB01A45FB12002D553E /* main.m in Sources */,
 				F64298531A487E6B00872E25 /* ICStreamLayoutSectionInfo.m in Sources */,

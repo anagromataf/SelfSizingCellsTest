@@ -7,6 +7,7 @@
 //
 
 #import "ICStreamLayoutInfo.h"
+#import "ICStreamLayoutInvalidationContext.h"
 
 #import "ICStreamLayout.h"
 
@@ -20,6 +21,11 @@
 @end
 
 @implementation ICStreamLayout
+
++ (Class)invalidationContextClass
+{
+    return [ICStreamLayoutInvalidationContext class];
+}
 
 #pragma mark Life-cycle
 
@@ -149,7 +155,7 @@
 
 #pragma mark Invalidating the Layout
 
-- (void)invalidateLayoutWithContext:(UICollectionViewLayoutInvalidationContext *)context
+- (void)invalidateLayoutWithContext:(ICStreamLayoutInvalidationContext *)context
 {
     NSLog(@"%s", __PRETTY_FUNCTION__);
     NSLog(@".. size adjustment: %@", NSStringFromCGSize(context.contentSizeAdjustment));
@@ -159,6 +165,10 @@
         NSLog(@".. invalidating all");
         self.layoutInfoIsValid = NO;
         [self.itemLayoutAttributesByIndexPath removeAllObjects];
+    } else if (context.invalidateLayoutInfoSizes) {
+        [context invalidateItemsAtIndexPaths:[self.itemLayoutAttributesByIndexPath allKeys]];
+        [self.itemLayoutAttributesByIndexPath removeAllObjects];
+        self.layoutInfoIsValid = NO;
     } else {
         NSLog(@".. invalidating:");
         [context.invalidatedItemIndexPaths enumerateObjectsUsingBlock:^(NSIndexPath *indexPath, NSUInteger idx, BOOL *stop) {
@@ -168,6 +178,18 @@
     }
     
     [super invalidateLayoutWithContext:context];
+}
+
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
+{
+    return CGRectGetWidth(newBounds) != self.layoutInfo.size.width;
+}
+
+- (ICStreamLayoutInvalidationContext *)invalidationContextForBoundsChange:(CGRect)newBounds
+{
+    ICStreamLayoutInvalidationContext *context = (ICStreamLayoutInvalidationContext *)[super invalidationContextForBoundsChange:newBounds];
+    context.invalidateLayoutInfoSizes = YES;
+    return context;
 }
 
 - (BOOL)shouldInvalidateLayoutForPreferredLayoutAttributes:(UICollectionViewLayoutAttributes *)preferredAttributes withOriginalAttributes:(UICollectionViewLayoutAttributes *)originalAttributes
