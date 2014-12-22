@@ -16,7 +16,10 @@
 		F6278AD51A45FB8B002D553E /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6278AD41A45FB8B002D553E /* CollectionViewController.m */; };
 		F6278AD91A45FC16002D553E /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6278AD71A45FC16002D553E /* CollectionViewCell.m */; };
 		F6278ADA1A45FC16002D553E /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6278AD81A45FC16002D553E /* CollectionViewCell.xib */; };
-		F6278ADD1A45FE33002D553E /* CollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F6278ADC1A45FE33002D553E /* CollectionViewLayout.m */; };
+		F64298511A487E6A00872E25 /* ICStreamLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = F642984A1A487E6A00872E25 /* ICStreamLayout.m */; };
+		F64298521A487E6B00872E25 /* ICStreamLayoutInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F642984C1A487E6A00872E25 /* ICStreamLayoutInfo.m */; };
+		F64298531A487E6B00872E25 /* ICStreamLayoutSectionInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F642984E1A487E6A00872E25 /* ICStreamLayoutSectionInfo.m */; };
+		F64298541A487E6B00872E25 /* ICStreamLayoutItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = F64298501A487E6A00872E25 /* ICStreamLayoutItemInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,8 +49,14 @@
 		F6278AD61A45FC16002D553E /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		F6278AD71A45FC16002D553E /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
 		F6278AD81A45FC16002D553E /* CollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
-		F6278ADB1A45FE33002D553E /* CollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewLayout.h; sourceTree = "<group>"; };
-		F6278ADC1A45FE33002D553E /* CollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewLayout.m; sourceTree = "<group>"; };
+		F64298491A487E6A00872E25 /* ICStreamLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStreamLayout.h; sourceTree = "<group>"; };
+		F642984A1A487E6A00872E25 /* ICStreamLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStreamLayout.m; sourceTree = "<group>"; };
+		F642984B1A487E6A00872E25 /* ICStreamLayoutInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStreamLayoutInfo.h; sourceTree = "<group>"; };
+		F642984C1A487E6A00872E25 /* ICStreamLayoutInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStreamLayoutInfo.m; sourceTree = "<group>"; };
+		F642984D1A487E6A00872E25 /* ICStreamLayoutSectionInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStreamLayoutSectionInfo.h; sourceTree = "<group>"; };
+		F642984E1A487E6A00872E25 /* ICStreamLayoutSectionInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStreamLayoutSectionInfo.m; sourceTree = "<group>"; };
+		F642984F1A487E6A00872E25 /* ICStreamLayoutItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICStreamLayoutItemInfo.h; sourceTree = "<group>"; };
+		F64298501A487E6A00872E25 /* ICStreamLayoutItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICStreamLayoutItemInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +102,16 @@
 				F6278AB21A45FB12002D553E /* AppDelegate.m */,
 				F6278AD31A45FB8B002D553E /* CollectionViewController.h */,
 				F6278AD41A45FB8B002D553E /* CollectionViewController.m */,
-				F6278ADB1A45FE33002D553E /* CollectionViewLayout.h */,
-				F6278ADC1A45FE33002D553E /* CollectionViewLayout.m */,
 				F6278AD61A45FC16002D553E /* CollectionViewCell.h */,
 				F6278AD71A45FC16002D553E /* CollectionViewCell.m */,
+				F64298491A487E6A00872E25 /* ICStreamLayout.h */,
+				F642984A1A487E6A00872E25 /* ICStreamLayout.m */,
+				F642984B1A487E6A00872E25 /* ICStreamLayoutInfo.h */,
+				F642984C1A487E6A00872E25 /* ICStreamLayoutInfo.m */,
+				F642984D1A487E6A00872E25 /* ICStreamLayoutSectionInfo.h */,
+				F642984E1A487E6A00872E25 /* ICStreamLayoutSectionInfo.m */,
+				F642984F1A487E6A00872E25 /* ICStreamLayoutItemInfo.h */,
+				F64298501A487E6A00872E25 /* ICStreamLayoutItemInfo.m */,
 				F6278AD81A45FC16002D553E /* CollectionViewCell.xib */,
 				F6278AB71A45FB12002D553E /* Main.storyboard */,
 				F6278ABA1A45FB12002D553E /* Images.xcassets */,
@@ -233,10 +248,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F6278ADD1A45FE33002D553E /* CollectionViewLayout.m in Sources */,
+				F64298511A487E6A00872E25 /* ICStreamLayout.m in Sources */,
 				F6278AB31A45FB12002D553E /* AppDelegate.m in Sources */,
+				F64298521A487E6B00872E25 /* ICStreamLayoutInfo.m in Sources */,
 				F6278AB01A45FB12002D553E /* main.m in Sources */,
+				F64298531A487E6B00872E25 /* ICStreamLayoutSectionInfo.m in Sources */,
 				F6278AD91A45FC16002D553E /* CollectionViewCell.m in Sources */,
+				F64298541A487E6B00872E25 /* ICStreamLayoutItemInfo.m in Sources */,
 				F6278AD51A45FB8B002D553E /* CollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +446,7 @@
 				F6278ACF1A45FB12002D553E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6278AD01A45FB12002D553E /* Build configuration list for PBXNativeTarget "SelfSizingCellsTestTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +455,7 @@
 				F6278AD21A45FB12002D553E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

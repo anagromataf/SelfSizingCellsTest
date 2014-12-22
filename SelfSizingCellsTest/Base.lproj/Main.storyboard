@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IZg-Dh-D9E">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yek-Vh-TKK">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
     <scenes>
         <!--Collection View Controller-->
@@ -11,17 +11,54 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Psz-wx-fKx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <collectionViewLayout key="collectionViewLayout" id="w7X-PB-z3e" customClass="CollectionViewLayout"/>
+                        <collectionViewLayout key="collectionViewLayout" id="w7X-PB-z3e" customClass="ICStreamLayout"/>
                         <cells/>
                         <connections>
                             <outlet property="dataSource" destination="IZg-Dh-D9E" id="8aN-60-SS7"/>
                             <outlet property="delegate" destination="IZg-Dh-D9E" id="wtx-bk-PeH"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" id="BS7-Pa-qtt">
+                        <nil key="title"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="lZE-df-5VI">
+                            <connections>
+                                <action selector="removeAll:" destination="IZg-Dh-D9E" id="VM4-aK-tsq"/>
+                            </connections>
+                        </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hvz-wR-Awb">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Reload"/>
+                            <connections>
+                                <action selector="reload:" destination="IZg-Dh-D9E" eventType="touchUpInside" id="CXe-6C-hbn"/>
+                            </connections>
+                        </button>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="deX-vr-4O2">
+                            <connections>
+                                <action selector="add:" destination="IZg-Dh-D9E" id="TMw-sv-sln"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yAx-Y2-imk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="363" y="1046"/>
+            <point key="canvasLocation" x="527" y="1060"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Io-Mk-Vxu">
+            <objects>
+                <navigationController id="Yek-Vh-TKK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4fg-e3-YXO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="IZg-Dh-D9E" kind="relationship" relationship="rootViewController" id="plk-VJ-sYf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2mt-16-2tk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-190" y="1060"/>
         </scene>
     </scenes>
 </document>
