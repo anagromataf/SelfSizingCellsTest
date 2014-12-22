@@ -24,6 +24,9 @@ static NSString * const reuseIdentifier = @"CollectionViewCell";
     
     self.items = [[NSMutableArray alloc] init];
     
+    // If not set to YES, the collection view can not be scrolled after an reload (even if the content size is big enough).
+    self.collectionView.alwaysBounceVertical = YES;
+    
     [self.collectionView registerNib:[UINib nibWithNibName:@"CollectionViewCell" bundle:nil]
           forCellWithReuseIdentifier:reuseIdentifier];
 }
